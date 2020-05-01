@@ -1,0 +1,22 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <filter id="svg_9_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="#fff" fill-opacity="0" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text filter="url(#svg_9_blur)" stroke="#fff" transform="matrix(2.7621557712554927,0,0,2.8214285373687735,-420.84181487560267,-319.8035649061202) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="24" id="svg_9" y="185.5" x="223.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#fff">PRIVID</text>
+  <line id="svg_11" y2="182.5" x2="482.5" y1="177.5" x1="115.5" fill-opacity="null" stroke-opacity="null" stroke-width="15.5" stroke="#fff" fill="none"/>
+  <line id="svg_12" y2="181.5" x2="423.5" y1="177.5" x1="444.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#fff" fill="none"/>
+  <rect stroke="#090a0a" id="svg_13" height="2" width="376" y="178.5" x="107.5" stroke-width="2" fill="none"/>
+ </g>
+</svg>

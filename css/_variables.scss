@@ -101,7 +101,7 @@ $sidebarWidth: 375px;
  * Misc.
  */
 $borderRadius: 4px;
-$defaultWatermarkLink: '../images/watermark.png';
+$defaultWatermarkLink: '../images/privid-logo-transparent.png';
 $popoverMenuPadding: 13px;
 $happySoftwareBackground: transparent;
 $desktopAppDragBarHeight: 25px;
@@ -162,15 +162,15 @@ $unsupportedDesktopBrowserTextFontSize: 21px;
 /**
  * The size of the default watermark.
  */
-$watermarkWidth: 186px;
-$watermarkHeight: 74px;
+$watermarkWidth: 206px;
+$watermarkHeight: 150px;
 
 /**
  * Welcome page variables.
  */
 $welcomePageDescriptionColor: #fff;
 $welcomePageFontFamily: inherit;
-$welcomePageBackground: linear-gradient(-90deg, #1251AE 0%, #0074FF 50%, #1251AE 100%);
+$welcomePageBackground: linear-gradient(-90deg, #000 0%, #2d3032 50%, #000 100%);
 $welcomePageTitleColor: #fff;
 
 $welcomePageHeaderBackground: none;
