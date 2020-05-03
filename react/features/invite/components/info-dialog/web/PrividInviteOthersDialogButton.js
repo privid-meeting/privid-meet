@@ -16,7 +16,7 @@ import { ToolbarButton } from '../../../../toolbox';
 import { updateDialInNumbers } from '../../../actions';
 
 import InfoDialog from './InfoDialog';
-import { IconPrividInviteOthers } from '../../../../base/icons/svg';
+import { IconAddPeople } from '../../../../base/icons/svg';
 
 /**
  * The type of the React {@code Component} props of {@link PrividInviteOthersDialogButton}.
@@ -180,7 +180,7 @@ class PrividInviteOthersDialogButton extends Component<Props, State> {
                     position = { 'top right' }>
                     <ToolbarButton
                         accessibilityLabel = { t('info.accessibilityLabel') }
-                        icon = { IconPrividInviteOthers }
+                        icon = { IconAddPeople }
                         onClick = { this._onDialogToggle }
                         tooltip = { t('info.tooltip') } />
                 </InlineDialog>
