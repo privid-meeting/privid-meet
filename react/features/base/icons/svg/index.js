@@ -36,6 +36,7 @@ export { default as IconFullScreen } from './full-screen.svg';
 export { default as IconHangup } from './hangup.svg';
 export { default as IconHelp } from './help.svg';
 export { default as IconInfo } from './info.svg';
+export { default as IconPrividInviteOthers } from './privid_invite_others.svg';
 export { default as IconInvite } from './invite.svg';
 export { default as IconKick } from './kick.svg';
 export { default as IconLiveStreaming } from './public.svg';

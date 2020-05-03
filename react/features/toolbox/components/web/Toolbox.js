@@ -85,6 +85,7 @@ import VideoSettingsButton from './VideoSettingsButton';
 import {
     ClosedCaptionButton
 } from '../../../subtitles';
+import PrividInviteOthersDialogButton from '../../../invite/components/info-dialog/web/PrividInviteOthersDialogButton';
 
 /**
  * The type of the React {@code Component} props of {@link Toolbox}.
@@ -1192,8 +1193,8 @@ class Toolbox extends Component<Props, State> {
         if (overflowHasItems) {
             buttonsRight.push('overflowmenu');
         }
-        if (this._shouldShowButton('info')) {
-            buttonsRight.push('info');
+        if (this._shouldShowButton('privid-invite-others')) {
+            buttonsRight.push('privid-invite-others');
         }
         if (this._shouldShowButton('invite') && !_hideInviteButton) {
             buttonsRight.push('invite');
@@ -1289,6 +1290,10 @@ class Toolbox extends Component<Props, State> {
                     {
                         buttonsRight.indexOf('info') !== -1
                             && <InfoDialogButton />
+                    }
+                    {
+                        buttonsRight.indexOf('privid-invite-others') !== -1
+                        && <PrividInviteOthersDialogButton />
                     }
                     { buttonsRight.indexOf('overflowmenu') !== -1
                         && <OverflowMenuButton
