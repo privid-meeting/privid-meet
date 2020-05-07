@@ -15,6 +15,10 @@ WEBPACK_DEV_SERVER = ./node_modules/.bin/webpack-dev-server
 
 all: compile deploy clean
 
+prod-build: compile deploy-prod clean
+
+dev-build: compile deploy-dev clean
+
 compile:
 	$(WEBPACK) -p
 
@@ -22,6 +26,11 @@ clean:
 	rm -fr $(BUILD_DIR)
 
 deploy: deploy-init deploy-appbundle deploy-rnnoise-binary deploy-lib-jitsi-meet deploy-libflac deploy-css deploy-local
+
+deploy-dev: deploy-init deploy-appbundle deploy-rnnoise-binary deploy-lib-jitsi-meet deploy-libflac deploy-css deploy-dev
+
+deploy-prod: deploy-init deploy-appbundle deploy-rnnoise-binary deploy-lib-jitsi-meet deploy-libflac deploy-css deploy-prod
+
 
 deploy-init:
 	rm -fr $(DEPLOY_DIR)
@@ -77,7 +86,13 @@ deploy-css:
 	rm $(STYLES_BUNDLE)
 
 deploy-local:
-	([ ! -x deploy-local.sh ] || ./deploy-local.sh)
+	([ ! -x deploy-local.sh ] || ./deploy-local.sh local)
+
+deploy-dev:
+	([ ! -x deploy-local.sh ] || ./deploy-local.sh dev)
+
+deploy-prod:
+	([ ! -x deploy-local.sh ] || ./deploy-local.sh prod)
 
 dev: deploy-init deploy-css deploy-rnnoise-binary deploy-lib-jitsi-meet deploy-libflac
 	$(WEBPACK_DEV_SERVER)

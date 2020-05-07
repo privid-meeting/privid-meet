@@ -168,61 +168,73 @@ class WelcomePage extends AbstractWelcomePage {
                 className = { `welcome ${showAdditionalContent
                     ? 'with-content' : 'without-content'}` }
                 id = 'welcome_page'>
-                <div className = 'welcome-watermark'>
-                    <Watermarks />
-                </div>
-                <div className = 'header'>
-                    <div className = 'welcome-page-settings'>
-                        <SettingsButton
-                            defaultTab = { SETTINGS_TABS.CALENDAR } />
-                        { showAdditionalToolbarContent
-                            ? <div
-                                className = 'settings-toolbar-content'
-                                ref = { this._setAdditionalToolbarContentRef } />
-                            : null
-                        }
-                    </div>
-                    <div className = 'header-image' />
-                    <div className = 'header-text'>
-                        <h1 className = 'header-text-title'>
-                            { t('welcomepage.title') }
-                        </h1>
-                        <p className = 'header-text-description'>
-                            { t('welcomepage.appDescription',
-                                { app: APP_NAME }) }
-                        </p>
-                    </div>
-                    <div id = 'enter_room'>
-                        <div className = 'enter-room-input-container'>
-                            <div className = 'enter-room-title'>
-                                { t('welcomepage.enterRoomTitle') }
-                            </div>
-                            <form onSubmit = { this._onFormSubmit }>
-                                <input
-                                    autoFocus = { true }
-                                    className = 'enter-room-input'
-                                    id = 'enter_room_field'
-                                    onChange = { this._onRoomChange }
-                                    pattern = { ROOM_NAME_VALIDATE_PATTERN_STR }
-                                    placeholder = { this.state.roomPlaceholder }
-                                    ref = { this._setRoomInputRef }
-                                    title = { t('welcomepage.roomNameAllowedChars') }
-                                    type = 'text'
-                                    value = { this.state.room } />
-                            </form>
+                <div>
+                    <div
+                        className = 'prividHeader'
+                        id = 'prividHeader'>
+                        <div>
+                            <Watermarks welcomeWatermark = 'welcomeWatermark' />
                         </div>
-                        <div
-                            className = 'welcome-page-button'
-                            id = 'enter_room_button'
-                            onClick = { this._onFormSubmit }>
-                            {
-                                showResponsiveText
-                                    ? t('welcomepage.goSmall')
-                                    : t('welcomepage.go')
+                        <div className = 'prividHeaderElement'>
+                            <SettingsButton
+                                defaultTab = { SETTINGS_TABS.CALENDAR } />
+                            { showAdditionalToolbarContent
+                                ? <div
+                                    className = 'settings-toolbar-content'
+                                    ref = { this._setAdditionalToolbarContentRef } />
+                                : null
                             }
+
                         </div>
                     </div>
-                    { this._renderTabs() }
+                    <div className = 'header'>
+                        <div className = 'welcome-page-settings' />
+                        <div className = 'header-image' />
+                    </div>
+                    <div className = 'header'>
+                        <div className = 'header-text'>
+                            <h1 className = 'header-text-title'>
+                                { t('welcomepage.title') }
+                            </h1>
+                            <p className = 'header-text-description'>
+                                { t('welcomepage.appDescription',
+                                { app: APP_NAME }) }
+                            </p>
+                        </div>
+                        <div id = 'enter_room'>
+                            <div className = 'enter-room-input-container'>
+                                <div className = 'enter-room-title'>
+                                    { t('welcomepage.enterRoomTitle') }
+                                </div>
+                                <form onSubmit = { this._onFormSubmit }>
+                                    <input
+                                        autoFocus = { true }
+                                        className = 'enter-room-input'
+                                        id = 'enter_room_field'
+                                        onChange = { this._onRoomChange }
+                                        pattern = { ROOM_NAME_VALIDATE_PATTERN_STR }
+                                        placeholder = { this.state.roomPlaceholder }
+                                        ref = { this._setRoomInputRef }
+                                        title = { t('welcomepage.roomNameAllowedChars') }
+                                        type = 'text'
+                                        value = { this.state.room } />
+                                </form>
+                            </div>
+                            <div
+                                className = 'welcome-page-button'
+                                id = 'enter_room_button'
+                                onClick = { this._onFormSubmit }>
+                                {
+                                    showResponsiveText
+                                        ? t('welcomepage.goSmall')
+                                        : t('welcomepage.go')
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div className = 'welcome header tab-container'>
+                        { this._renderTabs() }
+                    </div>
                 </div>
                 { showAdditionalContent
                     ? <div

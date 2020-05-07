@@ -101,10 +101,30 @@ form {
     display: block;
 }
 
+.prividHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50 0 50;
+}
+
+.prividHeaderElement{
+    float: right;
+}
+
+.welcomeWatermark {
+    display: block;
+    width: $watermarkWidth;
+    height: $watermarkHeight;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: $zindex2;
+}
+
+
 .watermark {
     display: block;
     position: absolute;
-    top: 15;
     width: $watermarkWidth;
     height: $watermarkHeight;
     background-size: contain;

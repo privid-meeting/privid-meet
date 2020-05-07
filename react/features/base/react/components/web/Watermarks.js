@@ -29,7 +29,12 @@ type Props = {
     /**
      * Invoked to obtain translated strings.
      */
-    t: Function
+    t: Function,
+
+    /**
+     * if coming from the welcome page use this watermark instead
+     */
+    welcomeWatermark: string
 };
 
 /**
@@ -177,7 +182,11 @@ class Watermarks extends Component<Props, State> {
         if (this.state.showJitsiWatermark
                 || (this.props._isGuest
                     && this.state.showJitsiWatermarkForGuests)) {
-            reactElement = <div className = 'watermark leftwatermark' />;
+            if (this.props.welcomeWatermark) {
+                reactElement = <div className = 'welcomeWatermark leftwatermark' />;
+            } else {
+                reactElement = <div className = 'watermark leftwatermark' />;
+            }
 
             const { jitsiWatermarkLink } = this.state;
 
